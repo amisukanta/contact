@@ -27,10 +27,41 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+# learn-rails
+# helps to use Rails without a database
+gem 'activerecord-tableless'
+#support for zurb-foundation as fornt-end css framework
+gem 'compass-rails', '~> 1.1.2'
+#using zurb-foundation as fornt-end css framework
+gem 'zurb-foundation'
+#configuration framework
+gem 'figaro'
+#access to the MailChimp API
+gem 'gibbon'
+#use Google-Drive spreed sheets for data storage
+gem 'google_drive'
+# for creating static pages like "about"
+gem 'high_voltage'
+#forms made easy
+gem 'simple_form'
+
+
+group :development do
+	#helps when things go wrong
+	gem 'better_errors'
+	#suppresses distracting messages in the log
+	gem 'quiet_assets'
+	#generates files for an application layout
+	gem 'rails_layout'
 end
+
+
+#group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+ # gem 'sdoc', require: false
+#end
+
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
