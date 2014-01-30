@@ -31,7 +31,8 @@ def create
 
 	 @contact = Contact.new(secure_params)
 	 if @contact.valid?
-
+	 	@contact.update_spreadsheet
+	 	
 	 	flash[:note] = "Message sent from #{@contact.name}."
 	 	redirect_to root_path
 	 else
