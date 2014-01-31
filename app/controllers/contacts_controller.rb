@@ -32,6 +32,7 @@ def create
 	 @contact = Contact.new(secure_params)
 	 if @contact.valid?
 	 	@contact.update_spreadsheet
+	 	UserMailer.contact_email(@contact).deliver
 	 	
 	 	flash[:note] = "Message sent from #{@contact.name}."
 	 	redirect_to root_path
@@ -42,9 +43,9 @@ end
 
 private
 
-def secure_params
- params.require(:contact).permit(:name, :email, :content)
-end
+	def secure_params
+	 params.require(:contact).permit(:name, :email, :content)
+	end
 
 
 end
