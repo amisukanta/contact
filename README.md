@@ -1,6 +1,6 @@
-Learning Rails
+Contact with Rails4
 ==
 
-Learning Rails with a tutorial from the RailsApps project.
+Creating a contact application where users data will be stored in Google drive and email will be delivered via mailchimp
 
 
