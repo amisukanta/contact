@@ -19,7 +19,7 @@ class Contact < ActiveRecord::Base
 		ss = connection.spreadsheet_by_title('Learn-Rails-Example')
 
 		if ss.nil?
-			ss = connection.create_spreadsheet('Learn-Rails-Example')
+			ss = connection.create_spreadsheet('Contact Me')
 		end
 		ws = ss.worksheets[0]
 		last_row = 1 + ws.num_rows
